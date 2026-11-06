@@ -1,0 +1,17 @@
+{
+  "name": "phi-nguin",
+  "version": "1.0.0",
+  "description": "Phi-nguin: a lightweight chat web app for a local Ollama server",
+  "type": "module",
+  "private": true,
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "qrcode-generator": "2.0.4"
+  }
+}

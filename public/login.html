@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Sign in · Phi-nguin</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#17182b" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="/icon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/icon-192.png" sizes="192x192" type="image/png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body class="page-scroll">
+  <main class="login">
+    <form class="login-card" id="loginForm" novalidate>
+      <div class="login-head">
+        <img class="login-logo" src="/icon-320.png" alt="" width="96" height="96">
+        <h1>Phi-nguin</h1>
+        <p>Sign in to continue</p>
+      </div>
+
+      <!-- Lets password managers file the password under "Phi-nguin"; there is no username. -->
+      <input class="sr-only" type="text" name="username" value="Phi-nguin" autocomplete="username" tabindex="-1" aria-hidden="true" readonly>
+
+      <label class="field">
+        <span>Password</span>
+        <input type="password" id="password" name="password" autocomplete="current-password" required autofocus>
+      </label>
+      <div class="field">
+        <label for="code" id="codeLabel">Authenticator code</label>
+        <input class="code-input" type="text" id="code" name="code" inputmode="numeric" autocomplete="one-time-code"
+               maxlength="6" placeholder="000000" required>
+        <button class="link-btn" id="codeMode" type="button">Use a backup code instead</button>
+      </div>
+      <label class="check">
+        <input type="checkbox" id="remember" checked>
+        <span>Keep me signed in on this device for 30 days</span>
+      </label>
+
+      <p class="login-error" id="error" role="alert" hidden></p>
+      <button class="btn primary login-btn" id="submit" type="submit">Sign in</button>
+    </form>
+  </main>
+  <script src="/login.js"></script>
+</body>
+</html>

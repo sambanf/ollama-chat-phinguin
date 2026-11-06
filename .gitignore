@@ -1,0 +1,8 @@
+# Secrets: never commit these
+auth.json
+auth.json.tmp
+backup-codes.json
+backup-codes.json.tmp
+
+node_modules/
+logs/
